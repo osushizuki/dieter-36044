@@ -30,7 +30,7 @@ Things you may want to cover:
 |weight               |integer  |null: false                   |
 |height               |integer  |null: false                   |
 |age                  |integer  |null: false                   |
-|habit_id             |Integer  |null: false                   |
+|habit_id             |integer  |null: false                   |
 
 ### Association
 has_many :exercises
