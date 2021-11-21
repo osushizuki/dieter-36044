@@ -15,3 +15,15 @@
     <span class='purchase-btn-text'>食事記録</span>
   <% end %>
 </div>
+
+<div class="price-content">
+  <%= link_to(new_health_path) do %>
+    <span class='purchase-btn-text'>体重入力</span>
+  <% end %>
+</div>
+
+<% @healths.each do |health| %>
+  <h3 class='item-name'>
+    <%= health.every_weight %>
+  </h3>
+<% end %>
