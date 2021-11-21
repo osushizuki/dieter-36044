@@ -48,7 +48,7 @@ belongs_to :user
 ##meals テーブル
 |Column               |Type         |Options                       |
 |calorie              |integer      |null: false                   |
-|explanation          |references   |null: false                   |
+|explanation          |text         |null: false                   |
 |user                 |references   |null: false, foreign_key: true|
 
 ### Association

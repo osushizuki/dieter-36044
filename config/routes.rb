@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: "exercises#index"
   resources :users
   resources :exercises
+  resources :meals
 end

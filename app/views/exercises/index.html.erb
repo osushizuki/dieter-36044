@@ -1,6 +1,14 @@
 <h1>Exercises#index</h1>
 <p>Find me in app/views/exercises/index.html.erb</p>
 
-<%= link_to(new_exercise_path) do %>
-  <span class='purchase-btn-text'>運動記録</span>
-<% end %>
+<div class="price-content">
+  <%= link_to(new_exercise_path) do %>
+    <span class='purchase-btn-text'>運動記録</span>
+  <% end %>
+</div>
+
+<div class="price-content">
+  <%= link_to(new_meal_path) do %>
+    <span class='purchase-btn-text'>食事記録</span>
+  <% end %>
+</div>
