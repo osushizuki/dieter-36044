@@ -74,6 +74,12 @@
           </div>
         </div>
 
+        <div class="weight-bold-text">
+          運動習慣
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:habit_id, Habit.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+
         <div class='actions'>
           <%= f.submit "Create Account", class: 'btn'%>
         </div>
