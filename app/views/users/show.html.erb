@@ -11,8 +11,6 @@
       <%#= image_tag @item.image ,class:"item-box-img" %>
     </div>
 
-    <%= link_to "プロフィール変更", edit_user_path, method: :get, class: "item-red-btn" %>
-
     <div class="item-explain-box">
       <span><%#= @item.explanation %></span>
     </div>
@@ -56,5 +54,6 @@
 
       </tbody>
     </table>
+    <%= link_to "プロフィール変更", edit_user_path, method: :get, class: "item-red-btn" %>
   </div>
 </div>
