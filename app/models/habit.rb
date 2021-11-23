@@ -1,16 +1,11 @@
 class Habit < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
-    { id: 2, name: 'レディース' },
-    { id: 3, name: 'メンズ' },
-    { id: 4, name: 'ベビー・キッズ' },
-    { id: 5, name: 'インテリア・住まい・小物' },
-    { id: 6, name: '本・音楽・ゲーム' },
-    { id: 7, name: 'おもちゃ・ホビー・グッズ' },
-    { id: 8, name: '家電・スマホ・カメラ' },
-    { id: 9, name: 'スポーツ・レジャー' },
-    { id: 10, name: 'ハンドメイド' },
-    { id: 11, name: 'その他' }
+    { id: 2, name: 'ほぼ運動しない。通勤デスクワーク程度' },
+    { id: 3, name: '軽い運動。週に１〜２回程度の運動' },
+    { id: 4, name: '中程度の運動。週に３〜５回程度の運動' },
+    { id: 5, name: '激しい運動。週に６〜７回程度の運動' },
+    { id: 6, name: '非常に激しい運動。一日に２回程度の運動' }
   ]
 
   include ActiveHash::Associations

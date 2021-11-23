@@ -2,7 +2,22 @@
 <p>Find me in app/views/exercises/index.html.erb</p>
 <%= render "shared/header" %>
 
-
+<div class="price-content">
+  <span class="sell-yen">あなたの一日総消費カロリーは</span>
+  <% kal = current_user.weight * 13.397 + 4.799 * current_user.height - 5.677 * current_user.age + 88.362 %>
+  <% if current_user.habit_id = 2%>
+   <%= (kal * 1.2).floor(0)%>
+  <% elsif current_user.habit_id = 3%>
+    <%= (kal * 1.375).floor(0)%>
+  <% elsif current_user.habit_id = 4%>
+    <%= (kal * 1.55).floor(0)%>
+  <% elsif current_user.habit_id = 5%>
+    <%= (kal * 1.725).floor(0)%>
+  <% else %>
+    <%= (kal * 1.9).floor(0)%>
+  <% end %>
+  <span class="sell-yen">kalです</span>
+</div>
 
 <div class="price-content">
   <%= link_to(new_exercise_path) do %>
@@ -17,13 +32,18 @@
 </div>
 
 <div class="price-content">
-  <%= link_to(new_health_path) do %>
-    <span class='purchase-btn-text'>体重入力</span>
+  <% if %>
+    <%= link_to(new_health_path) do %>
+      <span class='purchase-btn-text'>体重入力</span>
+    <% end %>
   <% end %>
 </div>
 
 <% @healths.each do |health| %>
   <h3 class='item-name'>
     <%= health.every_weight %>
+    <%= health.created_at %>
   </h3>
 <% end %>
+
+<%#= line_chart @data %>
