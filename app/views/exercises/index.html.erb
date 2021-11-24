@@ -20,6 +20,18 @@
 </div>
 
 <div class="price-content">
+  <span class="sell-yen">本日の総摂取カロリーは</span>
+    <%  kal = 0 %>
+    <% @meals.each do |meal| %>
+      <% if Date.current.strftime('%Y/%m/%d') == meal.created_at.strftime('%Y/%m/%d')%>
+        <%  kal += meal.calorie %>
+      <% end %>
+    <% end %>
+    <%= kal %>
+    <span class="sell-yen">kalです</span>
+</div>
+
+<div class="price-content">
   <%= link_to(new_exercise_path) do %>
     <span class='purchase-btn-text'>運動記録</span>
   <% end %>
@@ -46,4 +58,3 @@
   </h3>
 <% end %>
 
-<%#= line_chart @data %>

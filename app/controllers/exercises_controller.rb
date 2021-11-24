@@ -1,7 +1,7 @@
 class ExercisesController < ApplicationController
   def index
     @healths = Health.all
-    @graph = [['2019-06-01', 100], ['2019-06-02', 200], ['2019-06-03', 150]]
+    @meals = Meal.all
   end
 
   def new
