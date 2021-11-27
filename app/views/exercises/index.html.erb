@@ -23,7 +23,7 @@
   <span class="sell-yen">本日の総摂取カロリーは</span>
     <%  kal = 0 %>
     <% @meals.each do |meal| %>
-      <% if Date.current.strftime('%Y/%m/%d') == meal.created_at.strftime('%Y/%m/%d')%>
+      <% if Date.current.strftime('%Y/%m/%d') == meal.created_at.strftime('%Y/%m/%d') %>
         <%  kal += meal.calorie %>
       <% end %>
     <% end %>
@@ -54,7 +54,7 @@
 <% @healths.each do |health| %>
   <h3 class='item-name'>
     <%= health.every_weight %>
-    <%= health.created_at %>
+    <%= health.created_at.strftime('%Y/%m/%d') %>
   </h3>
 <% end %>
 

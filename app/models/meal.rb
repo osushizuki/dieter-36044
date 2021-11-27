@@ -5,4 +5,6 @@ class Meal < ApplicationRecord
   end
 
   belongs_to :user
+
+
 end
