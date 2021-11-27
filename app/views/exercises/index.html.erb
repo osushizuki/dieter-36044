@@ -58,3 +58,5 @@
   </h3>
 <% end %>
 
+<%= column_chart Meal.group(:created_at).sum(:calorie) %>
+
