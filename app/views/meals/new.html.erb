@@ -1,7 +1,5 @@
 <%= render "shared/header" %>
 
-<h1>Meals#new</h1>
-
 <%= form_with model:@meal, local: true do |f|%>
 
   <div class="price-content">
@@ -25,4 +23,5 @@
     <%= f.submit "記録する" ,class:"sell-btn" %>
   </div>
 
+  <%= column_chart Meal.group(:created_at).sum(:calorie) %>
 <% end %>
