@@ -30,24 +30,26 @@
     <span class="sell-yen">kalです</span>
 </div>
 
-<div class="price-content">
-  <%= link_to(new_exercise_path) do %>
-    <span class='purchase-btn-text'>運動記録</span>
-  <% end %>
-</div>
-
-<div class="price-content">
-  <%= link_to(new_meal_path) do %>
-    <span class='purchase-btn-text'>食事記録</span>
-  <% end %>
-</div>
-
-<div class="price-content">
-  <% if %>
-    <%= link_to(new_health_path) do %>
-      <span class='purchase-btn-text'>体重入力</span>
+<div class = "input-menu">
+  <div class = "input-menu">
+    <%= link_to(new_exercise_path) do %>
+      <span>運動記録</span>
     <% end %>
-  <% end %>
+  </div>
+
+  <div>
+    <%= link_to(new_meal_path) do %>
+      <span>食事記録</span>
+    <% end %>
+  </div>
+
+  <div>
+    <% if %>
+      <%= link_to(new_health_path) do %>
+        <span>体重入力</span>
+      <% end %>
+    <% end %>
+  </div>
 </div>
 
 <% @healths.each do |health| %>
