@@ -32,6 +32,7 @@ Things you may want to cover:
 | height               | integer  | null: false                   |
 | age                  | integer  | null: false                   |
 | habit_id             | integer  | null: false                   |
+| sex_id               | integer  | null: false                   |
 
 ### Association
 has_many :exercises
@@ -41,7 +42,7 @@ has_many :meals
 | Column               | Type         | Options                       |
 | -------------------- | ------------ | ----------------------------- |
 | time                 | integer      | null: false                   |
-| menu_id              | Integer      | null: false                   |
+| menu_id              | integer      | null: false                   |
 | user                 | references   | null: false, foreign_key: true|
 
 ### Association
