@@ -24,32 +24,32 @@ Things you may want to cover:
 * ...
 
 ## users テーブル
-| Column               |Type     |Options                       |
-| nick_name            |string   |null: false                   |
-| encrypted_password   |string   |null: false                   |
-| weight               |integer  |null: false                   |
-| height               |integer  |null: false                   |
-| age                  |integer  |null: false                   |
-| habit_id             |integer  |null: false                   |
+| Column               | Type     | Options                       |
+| nick_name            | string   | null: false                   |
+| encrypted_password   | string   | null: false                   |
+| weight               | integer  | null: false                   |
+| height               | integer  | null: false                   |
+| age                  | integer  | null: false                   |
+| habit_id             | integer  | null: false                   |
 
 ### Association
 has_many :exercises
 has_many :meals
 
 ## exercises テーブル
-| Column               |Type         |Options                       |
-| time                 |integer      |null: false                   |
-| menu_id              |Integer      |null: false                   |
-| user                 |references   |null: false, foreign_key: true|
+| Column               | Type         | Options                       |
+| time                 | integer      | null: false                   |
+| menu_id              | Integer      | null: false                   |
+| user                 | references   | null: false, foreign_key: true|
 
 ### Association
 belongs_to :user
 
 ## meals テーブル
-| Column               |Type         |Options                       |
-| calorie              |integer      |null: false                   |
-| explanation          |text         |null: false                   |
-| user                 |references   |null: false, foreign_key: true|
+| Column               | Type         | Options                       |
+| calorie              | integer      | null: false                   |
+| explanation          | text         | null: false                   |
+| user                 | references   | null: false, foreign_key: true|
 
 ### Association
 belongs_to :user
