@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-##　users テーブル
+## users テーブル
 | Column               |Type     |Options                       |
 | nick_name            |string   |null: false                   |
 | encrypted_password   |string   |null: false                   |
@@ -36,7 +36,7 @@ Things you may want to cover:
 has_many :exercises
 has_many :meals
 
-##　exercises テーブル
+## exercises テーブル
 | Column               |Type         |Options                       |
 | time                 |integer      |null: false                   |
 | menu_id              |Integer      |null: false                   |
@@ -45,7 +45,7 @@ has_many :meals
 ### Association
 belongs_to :user
 
-##　meals テーブル
+## meals テーブル
 | Column               |Type         |Options                       |
 | calorie              |integer      |null: false                   |
 | explanation          |text         |null: false                   |
