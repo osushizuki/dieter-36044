@@ -4,7 +4,7 @@ class Menu < ActiveHash::Base
     { id: 2, name: 'ウォーキング' },
     { id: 3, name: 'ジョギング' },
     { id: 4, name: 'ランニング' },
-    { id: 5, name: 'ウエイトトレーニング' },
+    { id: 5, name: '筋トレ' },
     { id: 6, name: '水泳' },
   ]
 
