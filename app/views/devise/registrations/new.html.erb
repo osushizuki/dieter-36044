@@ -28,6 +28,15 @@
           </div>
         </div>
 
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :password_confirmation%>
+          </div>
+          <div class='field-input'>
+            <%= f.password_field :password_confirmation, autocomplete: "off"%>
+          </div>
+        </div>
+
         <div cclass='field'>
           <div class='field-label'>
             <label class="form-text">ニックネーム</label>
@@ -38,14 +47,11 @@
           </div>
         </div>
 
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :password_confirmation%>
-          </div>
-          <div class='field-input'>
-            <%= f.password_field :password_confirmation, autocomplete: "off"%>
-          </div>
+        <div class="weight-bold-text">
+          性別
+          <span class="indispensable">必須</span>
         </div>
+        <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
 
         <div class='field'>
           <div class='field-label'>

@@ -1,5 +1,7 @@
 class ExercisesController < ApplicationController
+
   def index
+    @exercises = Exercise.all
     @healths = Health.all
     @meals = Meal.all
   end
@@ -21,5 +23,4 @@ class ExercisesController < ApplicationController
   def exercise_params
     params.require(:exercise).permit(:time,:menu_id).merge(user_id: current_user.id)
   end
-
 end

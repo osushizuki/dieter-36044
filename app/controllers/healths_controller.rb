@@ -1,5 +1,4 @@
 class HealthsController < ApplicationController
-
   def new
     @health = Health.new
   end
@@ -18,5 +17,4 @@ class HealthsController < ApplicationController
   def health_params
     params.require(:health).permit(:every_weight).merge(user_id: current_user.id)
   end
-
 end

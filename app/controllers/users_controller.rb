@@ -12,13 +12,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    
+    @health = Health.all
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:nick_name, :email, :weight, :height, :age, :habit_id)
+    params.require(:user).permit(:nick_name, :sex_id, :weight, :height, :age, :habit_id)
   end
 
 end

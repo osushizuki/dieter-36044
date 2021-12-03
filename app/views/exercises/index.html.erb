@@ -1,63 +1,42 @@
-
 <%= render "shared/header" %>
 
-<div class="price-content">
-  <span class="sell-yen">あなたの一日総消費カロリーは</span>
-  <% kal = current_user.weight * 13.397 + 4.799 * current_user.height - 5.677 * current_user.age + 88.362 %>
-  <% if current_user.habit_id = 2%>
-   <%= (kal * 1.2).floor(0)%>
-  <% elsif current_user.habit_id = 3%>
-    <%= (kal * 1.375).floor(0)%>
-  <% elsif current_user.habit_id = 4%>
-    <%= (kal * 1.55).floor(0)%>
-  <% elsif current_user.habit_id = 5%>
-    <%= (kal * 1.725).floor(0)%>
-  <% else %>
-    <%= (kal * 1.9).floor(0)%>
-  <% end %>
-  <span class="sell-yen">kalです</span>
+<div>
+  <%= render "head" %>
 </div>
 
-<div class="price-content">
-  <span class="sell-yen">本日の総摂取カロリーは</span>
-    <%  kal = 0 %>
-    <% @meals.each do |meal| %>
-      <% if Date.current.strftime('%Y/%m/%d') == meal.created_at.strftime('%Y/%m/%d') %>
-        <%  kal += meal.calorie %>
-      <% end %>
-    <% end %>
-    <%= kal %>
-    <span class="sell-yen">kalです</span>
-</div>
+<div class = "center">
+  <div class = "total-calorie">
+    <div class = "in-calorie">
+      摂取カロリー
+    </div>
 
-<div class = "input-menu">
-  <div class = "input-menu">
-    <%= link_to(new_exercise_path) do %>
-      <span>運動記録</span>
-    <% end %>
+    <div class = "out-calorie">
+      消費カロリー
+    </div>
   </div>
 
-  <div>
-    <%= link_to(new_meal_path) do %>
-      <span>食事記録</span>
-    <% end %>
+  <div class = "total-calorie">
+    <%= render "shared/in-calorie" %>
+    <%= render "shared/out-calorie" %>
   </div>
 
-  <div>
-    <% if %>
-      <%= link_to(new_health_path) do %>
-        <span>体重入力</span>
-      <% end %>
-    <% end %>
+  <div class = "calorie-show">
+    <%= render "shared/today-eat" %>
+    <%= render "shared/today-exercise" %>
   </div>
 </div>
 
-<% @healths.each do |health| %>
-  <h3 class='item-name'>
-    <%= health.every_weight %>
-    <%= health.created_at.strftime('%Y/%m/%d') %>
-  </h3>
-<% end %>
+<div class = "menu">
+  <div class="in-menu">
+    <%= link_to(new_health_path) do %>体重入力<% end %>
+  </div>
 
+  <div class="in-menu">
+    <%= link_to(new_exercise_path) do %>運動入力<% end %>
+  </div>
 
+  <div class="in-menu">
+    <%= link_to(new_meal_path) do %>食事入力<% end %>
+  </div>
 
+</div>
