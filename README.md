@@ -104,6 +104,22 @@ belongs_to :user
 ### Association
 belongs_to :user
 
+# 実装機能
+[![Image from Gyazo](https://i.gyazo.com/efe799f0b13e08bb92c52c825c8769ef.png)](https://gyazo.com/efe799f0b13e08bb92c52c825c8769ef)
+体重入力ページを実装した
+
+[![Image from Gyazo](https://i.gyazo.com/7df77dd73dd33e4a7da816818a384cf2.gif)](https://gyazo.com/7df77dd73dd33e4a7da816818a384cf2)
+運動内容と運動時間を記録するページを実装した
+
+[![Image from Gyazo](https://i.gyazo.com/3d344c6485f9c2d68b5e39b03a717101.png)](https://gyazo.com/3d344c6485f9c2d68b5e39b03a717101)
+食事内容と食事カロリーを記録するページを実装した
+
+
+[![Image from Gyazo](https://i.gyazo.com/96061785472368f09b211078a1a52780.png)](https://gyazo.com/96061785472368f09b211078a1a52780)
+消費カロリーは運動の内容と運動時間から計算されるようになっている
+トップページでその日の総摂取カロリーと総消費カロリーを表示する
+
+
 # 実装予定の機能
 ・取り扱っている運動の種類を増やす
 ・体重を表示するグラフについて、表示するデータ数を変更できるようにする
