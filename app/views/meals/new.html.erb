@@ -2,24 +2,24 @@
 
 <%= form_with model:@meal, local: true do |f|%>
 
-  <div class="price-content">
-    <div class="price-text">
+  <div class="input-content">
+    <div>
       <span>運動時間</span>
-      <span class="indispensable">必須</span>
+      <span>必須</span>
     </div>
-    <%= f.text_field :calorie, class:"price-input", id:"item-price", placeholder:"例）30" %>
+    <%= f.text_field :calorie, placeholder:"例）30" %>
     <span class="sell-yen">kal</span>
   </div>
 
-  <div class="price-content">
-    <div class="price-text">
+  <div class="input-content">
+    <div>
       <span>食事内容</span>
-      <span class="indispensable">必須</span>
+      <span>必須</span>
     </div>
-    <%= f.text_field :explanation, class:"price-input", id:"item-price"%>
+    <%= f.text_field :explanation, id:"item-price"%>
   </div>
 
-  <div class="sell-btn-contents">
+  <div class="submit-content">
     <%= f.submit "記録する" ,class:"sell-btn" %>
   </div>
 

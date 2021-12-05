@@ -2,15 +2,16 @@
 
 <%= form_with model:@health, local: true do |f|%>
 
-  <div class="price-content">
-    <div class="price-text">
+  <div class="input-content">
+    <div>
       <span>体重</span>
+      <span>必須</span>
     </div>
-    <%= f.number_field :every_weight, step: '0.1',class:"price-input", id:"item-price", placeholder:"例）30" %>
+    <%= f.number_field :every_weight, step: '0.1', id:"item-price", placeholder:"例）30" %>
     <span class="sell-yen">kg</span>
   </div>
 
-  <div class="sell-btn-contents">
+  <div class="submit-content">
     <%= f.submit "記録する" ,class:"sell-btn" %>
   </div>
 
